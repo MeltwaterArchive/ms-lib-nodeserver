@@ -1,0 +1,24 @@
+{
+	"name": "ms-lib-nodecommon",
+	"description": "Base module for QA Node-based servers",
+	"version": "1.0.0",
+	"private": true,
+	"preferGlobal": false,
+	"author": {
+		"name": "Stuart Herbert",
+		"email": "stuart.herbert@datasift.com",
+		"url": "http://datasift.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/datasift/ms-lib-nodecommon"
+	},
+	"main": "./lib/index.js",
+	"engines": {
+		"node": "0.8 || 0.9",
+		"npm": "1"
+	},
+	"dependencies": {
+
+	}
+}
