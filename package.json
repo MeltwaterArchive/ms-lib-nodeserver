@@ -1,5 +1,5 @@
 {
-	"name": "ms-lib-nodecommon",
+	"name": "dsCommon",
 	"description": "Base module for QA Node-based servers",
 	"version": "1.0.0",
 	"private": true,
