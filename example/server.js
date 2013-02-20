@@ -1,5 +1,6 @@
 // simplify require statements
-APP_DIR          = process.cwd() + "/app";
+TOP_DIR          = process.cwd();
+APP_DIR          = TOP_DIR + "/app";
 APP_FEATURES_DIR = APP_DIR + "/features";
 
 // our external includes
@@ -11,12 +12,26 @@ var dsCommon = require('../lib/index.js');
 
 // our test server
 function dsTestServer() {
-	dsTestServer.super_.call(this);
+	dsTestServer.super_.call(this, {
+		name: "dsTestServer"
+	});
 
-	// who are we?
-	this.name ="dsTestServer";
+	// our plugin manager
+	this.pluginsManager = new dsCommon.dsPlugins(this, {
+		name: "ExamplePluginsManager",
+		type: "example",
+		folders: [ process.cwd() + "/example_plugins" ],
+		configRoot: "examplePlugins"
+	});
+
+	// listen for plugin events
+	this.on('exampleInitialised', this.onExampleInitialised.bind(this));
 }
 util.inherits(dsTestServer, dsCommon.dsAppServer);
+
+dsTestServer.prototype.onExampleInitialised = function(plugin) {
+	console.log(plugin);
+};
 
 dsTestServer.prototype.step2 = function() {
 	this.logNotice("Step 2 complete!!");

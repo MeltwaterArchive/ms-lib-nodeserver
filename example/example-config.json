@@ -1,5 +1,8 @@
 {
 	"httpServer": {
 		"port": 9250
+	},
+	"examplePlugins": {
+		"dsExamplePlugin": {}
 	}
 }
