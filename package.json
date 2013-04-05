@@ -22,6 +22,7 @@
 		"winston": "git+ssh://git@github.com:datasift/winston.git",
 		"winston-graylog2": "~0.1.10",
 		"restify": "~2.0",
-		"async": ">=0.2.5"
+		"async": ">=0.2.5",
+		"lynx": ">= 0.0.11"
 	}
 }
