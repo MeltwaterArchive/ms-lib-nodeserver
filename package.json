@@ -15,7 +15,7 @@
 	},
 	"main": "./lib/index.js",
 	"engines": [
-		"node => 0.8.14"
+		"node => 0.8"
 	],
 	"dependencies": {
 		"node-syslog": "1.1.7",
