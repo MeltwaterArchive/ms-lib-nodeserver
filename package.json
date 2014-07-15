@@ -19,7 +19,7 @@
 	],
 	"dependencies": {
 		"node-syslog": "1.1.7",
-		"winston": "git+ssh://git@github.com:datasift/winston.git",
+		"winston": "git+https://github.com/datasift/winston.git",
 		"winston-graylog2": "~0.1.10",
 		"restify": "~2.0",
 		"async": ">=0.2.5",
